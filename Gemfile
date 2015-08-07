@@ -52,6 +52,8 @@ gem 'delayed_job_active_record'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
 
+gem "erb2haml", :group => :development
+
 group :development do
   gem 'better_errors'
 end

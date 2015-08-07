@@ -1,0 +1,168 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %title Mazel - Multiprapose Html template
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "keywords"}/
+    %meta{:content => "nileforest", :name => "author"}/
+    %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0", :name => "viewport"}/
+    /[if IE] <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    / Favicone Icon
+    %link{:href => "img/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "img/favicon.png", :rel => "icon", :type => "image/png"}/
+    %link{:href => "img/favicon.png", :rel => "apple-touch-icon"}/
+    / CSS
+    %link{:href => "css/style.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/font-awesome.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/ionicons.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/plugin/jPushMenu.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/plugin/animate.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/jquery-ui.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/plugin/jquery.fullPage.css", :rel => "stylesheet"}/
+  %body.full-intro
+    / Preloader
+    %section#preloader
+      #loader.loader
+        .loader-img
+    / End Preloader
+    / Sidemenu
+    %section.side-menu.cbp-spmenu.cbp-spmenu-vertical.cbp-spmenu-right
+      %a.menu-close.toggle-menu.menu-right.push-body
+        %i.ion.ion-android-close
+      .logo.mb-30
+        %img{:alt => "mazel", :src => "img/logo-white.png"}/
+      %hr.dark/
+      %ul.mtb-30
+        %li
+          %a{:href => "index.html", :target => "_blank"} Main Demo Page
+        %li
+          %a{:href => "home.html"} Home Default
+        %li
+          %a{:href => "portfolio-grid-2col.html"} Portfolio
+        %li
+          %a{:href => "login-register.html"} Login &amp; Signup
+        %li
+          %a{:href => "faq-1.html"} FAQ
+        %li
+          %a{:href => "about-1.html"} About
+        %li
+          %a{:href => "service-1.html"} Service
+        %li
+          %a{:href => "blog-grid-3col.html"} Blog
+        %li
+          %a{:href => "404-error-1.html"} 404 Error
+        %li
+          %a{:href => "shop-checkout.html"} Shopping Cart
+        %li
+          %a{:href => "contact-1.html"} Contact Us
+      %hr.dark/
+      %ul.social.mt-30
+        %li
+          %a{:href => "https://www.twitter.com/", :target => "_blank"}
+            %i.fa.fa-twitter
+        %li
+          %a{:href => "https://instagram.com/", :target => "_blank"}
+            %i.fa.fa-instagram
+        %li
+          %a{:href => "https://www.facebook.com/", :target => "_blank"}
+            %i.fa.fa-facebook
+        %li
+          %a{:href => "https://vimeo.com/", :target => "_blank"}
+            %i.fa.fa-vimeo-square
+        %li
+          %a{:href => "https://www.behance.net/", :target => "_blank"}
+            %i.fa.fa-behance
+    / End Sidemenu
+    / Site Wraper
+    .wrapper
+      / Sidebar Menu Icon
+      .side-menu-btn-fix
+        %a.right-icon.bar-icon.toggle-menu.menu-right.push-body
+          %i.fa.fa-bars
+      / End Sidebar Menu Icon
+      #fullpage
+        #section0.section.bg-img28.overlay-dark.light-color{:style => "background: url('img/full/28.jpg')"}
+          .intro.container.text-center
+            .row
+              .col-md-8.col-md-offset-2
+                %h5 The Digitel Agency
+                %h2.h2 Full Section Scroll Page
+                .mt-30
+                  %a.btn.btn-md.btn-white-line.xs-hidden Read More
+                  %span.btn-space-10.xs-hidden
+                  %a.btn.btn-md.btn-white Learn More
+        #section1.section
+          #slide1.slide.bg-img20.overlay-dark{:style => "background: url('img/full/20.jpg')"}
+            .intro.container.light-color.text-center
+              .row
+                .col-md-8.col-md-offset-2
+                  %h2.h2 Slider section
+          #slide2.slide.bg-img11.overlay-light{:style => "background: url('img/full/11.jpg')"}
+            .intro.container.dark-color.text-center
+              .row
+                .col-md-8.col-md-offset-2
+                  %h2.h2 Slider section
+        #section2.section.bg-img22.overlay-dark80.light-color{:style => "background: url('img/full/22.jpg')"}
+          .intro.container
+            .row
+              .col-md-8
+                %h5 The Digitel Agency
+                %h2.h2 Full Section Scroll Page
+                .mt-30
+                  %a.btn.btn-md.btn-white-line.xs-hidden Read More
+                  %span.btn-space-10.xs-hidden
+                  %a.btn.btn-md.btn-white Learn More
+        #section3.section.bg-img10.overlay-light.dark-color{:style => "background: url('img/full/10.jpg')"}
+          .intro.container.text-right
+            .row
+              .col-md-offset-4.col-md-8
+                %h5 The Digitel Agency
+                %h2.h2 Full Section Scroll Page
+                .mt-30
+                  %a.btn.btn-md.btn-black-line Read More
+                  %span.btn-space-10.xs-hidden
+                  %a.btn.btn-md.btn-black.xs-hidden Read More
+      / CONTENT -------------------------------------------------------------------------------
+      / End -------------------------------------------------------------------------------
+    / Site Wraper End
+    / JS
+    %script{:src => "js/jquery-1.11.2.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.easing.js", :type => "text/javascript"}
+    %script{:src => "js/jquery-ui.min.js", :type => "text/javascript"}
+    %script{:src => "js/bootstrap.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.flexslider.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/background-check.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.fitvids.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.viewportchecker.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.stellar.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/wow.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.colorbox-min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/owl.carousel.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/isotope.pkgd.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/masonry.pkgd.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/imagesloaded.pkgd.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jPushMenu.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.fs.tipper.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/mediaelement-and-player.min.js"}
+    %script{:src => "js/theme.js", :type => "text/javascript"}
+    %script{:src => "js/navigation.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.fullPage.js"}
+    / Full Page Section Script
+    :javascript
+      $(document).ready(function () {
+          $('#fullpage').fullpage({
+              anchors: ['section-a', 'section-b', 'section-c', 'section-d'],
+              sectionsColor: ['#C63D0F', '#fff', '#1BBC9B', '#ffffff'],
+              navigation: true,
+              navigationPosition: 'right',
+              navigationTooltips: ['First page', 'Second page', 'Third page', 'fourth page'],
+              slidesNavigation: true,
+              controlArrows: false,
+              responsive: 900
+          });
+
+      });
+    / End Full Page Section Script

@@ -1,0 +1,5 @@
+https://richonrails.com/articles/building-a-shopping-cart-in-ruby-on-rails
+
+
+http://stackoverflow.com/questions/10455410/what-is-a-good-shopping-cart-gem-for-rails
+

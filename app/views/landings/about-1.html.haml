@@ -1,0 +1,781 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %title Mazel - Multiprapose Html template
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "keywords"}/
+    %meta{:content => "nileforest", :name => "author"}/
+    %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0", :name => "viewport"}/
+    /[if IE] <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    / Favicone Icon
+    %link{:href => "img/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "img/favicon.png", :rel => "icon", :type => "image/png"}/
+    %link{:href => "img/favicon.png", :rel => "apple-touch-icon"}/
+    / CSS
+    %link{:href => "css/style.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/font-awesome.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/ionicons.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/plugin/jPushMenu.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/plugin/animate.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/jquery-ui.css", :rel => "stylesheet", :type => "text/css"}/
+  %body.full-intro
+    / Preloader
+    %section#preloader
+      #loader.loader
+        .loader-img
+    / End Preloader
+    / Sidemenu
+    %section.side-menu.cbp-spmenu.cbp-spmenu-vertical.cbp-spmenu-right
+      %a.menu-close.toggle-menu.menu-right.push-body
+        %i.ion.ion-android-close
+      %h5.white Sign In
+      .sign-in
+        %input#email.input-sm.form-full{"aria-required" => "true", :name => "email", :placeholder => "Email", :type => "email", :value => ""}/
+        %input#password.input-sm.form-full{"aria-required" => "true", :name => "password", :placeholder => "Password", :type => "password", :value => ""}/
+        %input.btn.btn-md.btn-color-b.form-full{:type => "submit", :value => "Sign In"}/
+        %a New Customer?
+      %ul
+        %li
+          %a{:href => "index.html", :target => "_blank"} Main Demo Page
+        %li
+          %a{:href => "home.html"} Home Default
+        %li
+          %a{:href => "portfolio-grid-2col.html"} Portfolio
+        %li
+          %a{:href => "login-register.html"} Login &amp; Signup
+        %li
+          %a{:href => "faq-1.html"} FAQ
+        %li
+          %a{:href => "about-1.html"} About
+        %li
+          %a{:href => "service-1.html"} Service
+        %li
+          %a{:href => "blog-grid-3col.html"} Blog
+        %li
+          %a{:href => "404-error-1.html"} 404 Error
+        %li
+          %a{:href => "shop-checkout.html"} Shopping Cart
+        %li
+          %a{:href => "contact-1.html"} Contact Us
+    / End Sidemenu
+    / Search menu Top
+    %section.top-search-bar.cbp-spmenu.cbp-spmenu-horizontal.cbp-spmenu-top
+      .container
+        .search-wraper
+          %input.input-sm.form-full{:name => "search", :placeholder => "Search...", :type => "text"}/
+          %a.search-bar-icon
+            %i.fa.fa-search
+          %a.bar-close.toggle-menu.menu-top.push-body
+            %i.ion.ion-android-close
+    / End Search menu Top
+    / Site Wraper
+    .wrapper
+      / HEADER
+      %header.header
+        .container
+          / logo
+          .logo
+            %a{:href => "home.html"}
+              %img.l-black{:src => "img/logo-black.png"}/
+              %img.l-white{:src => "img/logo-white.png"}/
+              %img.l-color{:src => "img/logo-color.png"}/
+          / End logo
+          / Rightside Menu (Search, Cart, Bart icon)
+          .side-menu-btn
+            %ul
+              / Search Icon
+              %li
+                %a.right-icon.search.toggle-menu.menu-top.push-body
+                  %i.fa.fa-search
+              / End Search Icon
+              / Cart Icon
+              %li
+                %a.right-icon.cart{:href => "shop-checkout.html"}
+                  %i.fa.fa-shopping-cart
+                  %span.cart-notification 2
+                / Cart Dropdown List
+                .cart-dropdown
+                  %ul.cart-list
+                    %li.light-color
+                      %a.close-cart-list
+                        %i.fa.fa-times-circle
+                      .media
+                        %a.pull-left
+                          %img{:alt => "fashion", :src => "img/product/02.jpg"}/
+                        .media-body
+                          %h6
+                            %a Fashion Model New /01
+                          %p $399.00
+                    %li.light-color
+                      %a.close-cart-list
+                        %i.fa.fa-times-circle
+                      .media
+                        %a.pull-left
+                          %img{:alt => "fashion", :src => "img/product/06.jpg"}/
+                        .media-body
+                          %h6
+                            %a Fashion Model New /02
+                          %p $399.00
+                  %p.cart-sub-totle
+                    %span.pull-left Cart Subtotal
+                    %span.pull-right.totle
+                      %strong $798.00
+                  .clearfix
+                  .cart-checkout-btn
+                    %a.btn.btn-md.btn-color-b.form-full.checkout{:href => "shop-checkout.html"} Checkout
+                / End Cart Dropdown List
+              / End Cart Icon
+              / Sidebar Menu Icon
+              %li
+                %a.right-icon.bar-icon.toggle-menu.menu-right.push-body
+                  %i.fa.fa-bars
+              / End Sidebar Menu Icon
+          / End Rightside Menu
+          / Navigation Menu
+          %nav.navigation
+            %ul
+              %li
+                %a{:href => "home.html"} Home
+                / Nav Dropdown
+                %ul.nav-dropdown
+                  %li.nav-has-sub
+                    %a{:href => "#"} Multi Page
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "home.html"} Default
+                      %li
+                        %a{:href => "home-video.html"} Intro Video
+                      %li
+                        %a{:href => "home-youtube.html"} Intro Youtube
+                      %li
+                        %a{:href => "home-static.html"} Intro Static
+                      %li
+                        %a{:href => "home-agency-grid.html"} Agency Grid
+                      %li
+                        %a{:href => "home-agency-masonry.html"} Agency Masonry
+                      %li
+                        %a{:href => "home-fullwidth-slider.html"} Fullwidth Slider
+                      %li
+                        %a{:href => "home-text-rotator1.html"} Text Rotator1
+                      %li
+                        %a{:href => "home-text-rotator2.html"} Text Rotator2
+                      %li
+                        %a{:href => "home-personal.html"} Personal
+                      %li
+                        %a{:href => "home-fullscreen.html"} Full Screen
+                      %li
+                        %a{:href => "home-canvas-pattern.html"} Canvas Pattern
+                      %li
+                        %a{:href => "home-section-scroll.html"} Page Section Scroll
+                      %li
+                        %a{:href => "shop-2col.html"} Shop
+                      %li
+                        %a{:href => "home-coming-soon.html"} Comming Soon
+                  %li.nav-has-sub
+                    %a{:href => "#"} One Page
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "onepage.html"} Default
+                      %li
+                        %a{:href => "onepage-personal.html"} Personal
+                      %li
+                        %a{:href => "onepage-video.html"} Video
+                      %li
+                        %a{:href => "onepage-youtube.html"} Youtube
+                      %li
+                        %a{:href => "onepage-static.html"} Static
+                      %li
+                        %a{:href => "onepage-fullwidth-slider.html"} Fullwidth
+                      %li
+                        %a{:href => "onepage-text-rotator1.html"} Text Rotator1
+                      %li
+                        %a{:href => "onepage-text-rotator2.html"} Text Rotator2
+                      %li
+                        %a{:href => "onepage-canvas-pattern.html"} Canvas Pattern
+                / End Nav Dropdown
+              %li.nav-has-sub
+                %a Page
+                / Nav Dropdown
+                %ul.nav-dropdown
+                  %li.nav-has-sub
+                    %a{:href => "#"} About Us
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "about-1.html"} About 1
+                      %li
+                        %a{:href => "about-2.html"} About 2
+                      %li
+                        %a{:href => "about-3.html"} About 3
+                  %li.nav-has-sub
+                    %a{:href => "#"} Service
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "service-1.html"} Service 1
+                      %li
+                        %a{:href => "service-2.html"} Service 2
+                      %li
+                        %a{:href => "service-3.html"} Service 3
+                  %li.nav-has-sub
+                    %a{:href => "#"} Contact Us
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "contact-1.html"} Contact 1
+                      %li
+                        %a{:href => "contact-2.html"} Contact 2
+                      %li
+                        %a{:href => "contact-3.html"} Contact 3
+                  %li.nav-has-sub
+                    %a{:href => "#"} Faq
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "faq-1.html"} Faq 1
+                      %li
+                        %a{:href => "faq-2.html"} Faq 2
+                  %li.nav-has-sub
+                    %a{:href => "#"} Login / Register
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "login.html"} Login
+                      %li
+                        %a{:href => "register.html"} Register
+                      %li
+                        %a{:href => "login-register.html"} Login / Register
+                  %li
+                    %a{:href => "pricing.html"} Pricing
+                  %li.nav-has-sub
+                    %a{:href => "#"} 404 Error
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "404-error-1.html"} 404 page1
+                      %li
+                        %a{:href => "404-error-2.html"} 404 page2
+                  %li
+                    %a{:href => "sidebar-left.html"} Sidebar Left
+                  %li
+                    %a{:href => "sidebar-right.html"} Sidebar Right
+                  %li
+                    %a{:href => "blank-page.html"} Blank Page
+                / End Nav Dropdown
+              %li
+                %a Portfolio
+                / Nav Dropdown
+                %ul.nav-dropdown
+                  %li.nav-has-sub
+                    %a{:href => "#"} Grid
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "portfolio-grid-2col.html"} 2 Columns
+                      %li
+                        %a{:href => "portfolio-grid-2col-no_spacing.html"} 2 Columns no-Spacing
+                      %li
+                        %a{:href => "portfolio-grid-3col.html"} 3 Columns
+                      %li
+                        %a{:href => "portfolio-grid-3col-no_spacing.html"} 3 Columns no-Spacing
+                      %li
+                        %a{:href => "portfolio-grid-4col.html"} 4 Columns
+                      %li
+                        %a{:href => "portfolio-grid-4col-no_spacing.html"} 4 Columns no-Spacing
+                  %li.nav-has-sub
+                    %a{:href => ""} Masonry
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "portfolio-masonry-2col.html"} 2 Columns
+                      %li
+                        %a{:href => "portfolio-masonry-2col-no_spacing.html"} 2 Columns no-Spacing
+                      %li
+                        %a{:href => "portfolio-masonry-3col.html"} 3 Columns
+                      %li
+                        %a{:href => "portfolio-masonry-3col-no_spacing.html"} 3 Columns no-Spacing
+                      %li
+                        %a{:href => "portfolio-masonry-4col.html"} 4 Columns
+                      %li
+                        %a{:href => "portfolio-masonry-4col-no_spacing.html"} 4 Columns no-Spacing
+                  %li.nav-has-sub
+                    %a{:href => ""} wide
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "portfolio-wide-grid.html"} Grid
+                      %li
+                        %a{:href => "portfolio-wide-grid-no_spacing.html"} Grid no-Spacing
+                      %li
+                        %a{:href => "portfolio-wide-masonry.html"} Masonry
+                      %li
+                        %a{:href => "portfolio-wide-masonry-no_spacing.html"} Masonry no-Spacing
+                  %li.nav-has-sub
+                    %a{:href => "#"} Classical
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "portfolio-classical-spacing.html"} Spacing
+                      %li
+                        %a{:href => "portfolio-classical-no_spacing.html"} no-Spacing
+                  %li.nav-has-sub
+                    %a{:href => "#"} Lightbox
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "portfolio-lightbox-grid.html"} Grid
+                      %li
+                        %a{:href => "portfolio-lightbox-masonry.html"} Masonry
+                  %li.nav-has-sub
+                    %a{:href => ""} Single
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "portfolio-single1.html"} Single 1
+                      %li
+                        %a{:href => "portfolio-single2.html"} Single 2
+                      %li
+                        %a{:href => "portfolio-single3.html"} Single 3
+                      %li
+                        %a{:href => "portfolio-single4.html"} Single 4
+                      %li
+                        %a{:href => "portfolio-single5-slider.html"} Single 5 - Slider
+                      %li
+                        %a{:href => "portfolio-single6-video.html"} Single 6 - Video
+                      %li
+                        %a{:href => "portfolio-single7-youtube.html"} Single 7 - youtube
+                      %li
+                        %a{:href => "portfolio-single8-vimeo.html"} Single 8 - vimeo
+                / End Nav Dropdown
+              %li
+                %a Blog
+                / Nav Dropdown
+                %ul.nav-dropdown
+                  %li.nav-has-sub
+                    %a{:href => ""} Grid
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "blog-grid-2col.html"} 2 Columns
+                      %li
+                        %a{:href => "blog-grid-2col-sidebar.html"} 2 Columns - sidebar
+                      %li
+                        %a{:href => "blog-grid-3col.html"} 3 Columns
+                  %li.nav-has-sub
+                    %a{:href => ""} Masonry
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "blog-masonry-2col.html"} 2 Columns
+                      %li
+                        %a{:href => "blog-masonry-2col-sidebar.html"} 2 Columns - sidebar
+                      %li
+                        %a{:href => "blog-masonry-3col.html"} 3 Columns
+                  %li.nav-has-sub
+                    %a{:href => ""} One Columns
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "blog-1col.html"} no-sidebar
+                      %li
+                        %a{:href => "blog-1col-sidebar.html"} with sidebar
+                  %li.nav-has-sub
+                    %a{:href => ""} Blog Detail
+                    %ul.nav-sub-dropdown
+                      %li
+                        %a{:href => "blog-single-image-post.html"} Image Post
+                      %li
+                        %a{:href => "blog-single-slider-post.html"} Slider Post
+                      %li
+                        %a{:href => "blog-single-video-post.html"} Video Post
+                      %li
+                        %a{:href => "blog-single-audio-post.html"} Audio Post
+                      %li
+                        %a{:href => "blog-single-youtube-post.html"} Youtube Post
+                      %li
+                        %a{:href => "blog-single-vimeo-post.html"} Vimeo Post
+                      %li
+                        %a{:href => "blog-single-quote-post.html"} Quote Post
+                / End Nav Dropdown
+              %li
+                %a Elements
+                / Nav Dropdown
+                %ul.nav-dropdown
+                  %li
+                    %a{:href => "element-components.html"} Components
+                  %li
+                    %a{:href => "element-tabs-and-accordian.html"} Tabs &amp; Accordian
+                  %li
+                    %a{:href => "element-slider.html"} Slider
+                  %li
+                    %a{:href => "element-team.html"} Team
+                  %li
+                    %a{:href => "element-pricing.html"} Pricing
+                  %li
+                    %a{:href => "element-video-and-audio.html"} Video / Audio
+                  %li
+                    %a{:href => "element-typography.html"} Typography
+                / End Nav Dropdown
+              %li
+                %a{:href => ""} Shop
+                / Nav Dropdown
+                %ul.nav-dropdown
+                  %li
+                    %a{:href => "shop-2col.html"} 2 Columns
+                  %li
+                    %a{:href => "shop-3col.html"} 3 Columns
+                  %li
+                    %a{:href => "shop-4col.html"} 4 Columns
+                  %li
+                    %a{:href => "shop-left-sidebar.html"} Left Sidebar
+                  %li
+                    %a{:href => "shop-right-sidebar.html"} Right Sidebar
+                  %li
+                    %a{:href => "shop-detail.html"} Shop Detail
+                  %li
+                    %a{:href => "shop-checkout.html"} Checkout
+                / End Nav Dropdown
+          / End Navigation Menu
+      / END HEADER
+      / CONTENT -------------------------------------------------------------------------------
+      / Intro Section
+      %section.inner-intro.bg-img2.overlay-light.parallax.parallax-background2
+        .container
+          .row.title
+            %h2.h2 About Us
+            .page-breadcrumb
+              %a> Home
+              \/
+              %span About
+      .clearfix
+      / End Intro Section
+      / About Section
+      %section.ptb.ptb-sm-80
+        .container
+          .row
+            .col-md-6
+              %h3 We Creative digital Studio
+              %p.lead Nullam dictum felis eu pede mollis pretium leo eget bibendum sodales augue velit cursus. tellus eget condimentum rhoncus sem quam semper libero.
+            .col-md-6
+              %p In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+              %p Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus.
+      / Team
+      %section.pb.pb-sm-80
+        .container
+          / Team Carousel
+          .row
+            .owl-carousel.team-carousel.nf-carousel-theme
+              .item
+                .team-item.nf-col-padding
+                  .team-item-img
+                    %img{:alt => "", :src => "img/team/people-1.jpg"}/
+                    .team-item-detail
+                      .team-item-detail-inner.light-color
+                        %h5 Mitchell KAPPOS
+                        %p Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.
+                        %ul.social
+                          %li
+                            %a{:href => "https://www.facebook.com/", :target => "_blank"}
+                              %i.fa.fa-facebook
+                          %li
+                            %a{:href => "https://www.twitter.com/", :target => "_blank"}
+                              %i.fa.fa-twitter
+                          %li
+                            %a{:href => "https://www.dribbble.com/", :target => "_blank"}
+                              %i.fa.fa-dribbble
+                          %li
+                            %a{:href => "https://www.pinterest.com/", :target => "_blank"}
+                              %i.fa.fa-pinterest
+                          %li
+                            %a{:href => "https://www.behance.net/", :target => "_blank"}
+                              %i.fa.fa-behance
+                  .team-item-info
+                    %h5 Mitchell KAPPOS
+                    %p Designer
+              .item
+                .team-item.nf-col-padding
+                  .team-item-img
+                    %img{:alt => "", :src => "img/team/people-2.jpg"}/
+                    .team-item-detail
+                      .team-item-detail-inner.light-color
+                        %h5 Leonardo da Vinci
+                        %p Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.
+                        %ul.social
+                          %li
+                            %a{:href => "https://www.facebook.com/", :target => "_blank"}
+                              %i.fa.fa-facebook
+                          %li
+                            %a{:href => "https://www.twitter.com/", :target => "_blank"}
+                              %i.fa.fa-twitter
+                          %li
+                            %a{:href => "https://www.dribbble.com/", :target => "_blank"}
+                              %i.fa.fa-dribbble
+                          %li
+                            %a{:href => "https://www.pinterest.com/", :target => "_blank"}
+                              %i.fa.fa-pinterest
+                          %li
+                            %a{:href => "https://www.behance.net/", :target => "_blank"}
+                              %i.fa.fa-behance
+                  .team-item-info
+                    %h5 Leonardo da Vinci
+                    %p Artist
+              .item
+                .team-item.nf-col-padding
+                  .team-item-img
+                    %img{:alt => "", :src => "img/team/people-3.jpg"}/
+                    .team-item-detail
+                      .team-item-detail-inner.light-color
+                        %h5 John Doe
+                        %p Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.
+                        %ul.social
+                          %li
+                            %a{:href => "https://www.facebook.com/", :target => "_blank"}
+                              %i.fa.fa-facebook
+                          %li
+                            %a{:href => "https://www.twitter.com/", :target => "_blank"}
+                              %i.fa.fa-twitter
+                          %li
+                            %a{:href => "https://www.dribbble.com/", :target => "_blank"}
+                              %i.fa.fa-dribbble
+                          %li
+                            %a{:href => "https://www.pinterest.com/", :target => "_blank"}
+                              %i.fa.fa-pinterest
+                          %li
+                            %a{:href => "https://www.behance.net/", :target => "_blank"}
+                              %i.fa.fa-behance
+                  .team-item-info
+                    %h5 John Doe
+                    %p Project Manager
+              .item
+                .team-item.nf-col-padding
+                  .team-item-img
+                    %img{:alt => "", :src => "img/team/people-4.jpg"}/
+                    .team-item-detail
+                      .team-item-detail-inner.light-color
+                        %h5 Michael Lee
+                        %p Similique sunt culpa qui officia deserunt mollitia animi dolorum fuga.
+                        %ul.social
+                          %li
+                            %a{:href => "https://www.facebook.com/", :target => "_blank"}
+                              %i.fa.fa-facebook
+                          %li
+                            %a{:href => "https://www.twitter.com/", :target => "_blank"}
+                              %i.fa.fa-twitter
+                          %li
+                            %a{:href => "https://www.dribbble.com/", :target => "_blank"}
+                              %i.fa.fa-dribbble
+                          %li
+                            %a{:href => "https://www.pinterest.com/", :target => "_blank"}
+                              %i.fa.fa-pinterest
+                          %li
+                            %a{:href => "https://www.behance.net/", :target => "_blank"}
+                              %i.fa.fa-behance
+                  .team-item-info
+                    %h5 Michael Lee
+                    %p Photographer
+          / End Team Carousel -
+      / End Team
+      / Testimonials
+      %section#testimonial.overlay-dark80.dark-bg.ptb.ptb-sm-80{"data-stellar-background-ratio" => "0.4", :style => "background-image: url('img/full/25.jpg');"}
+        .container
+          .owl-carousel.testimonial-carousel.nf-carousel-theme.white
+            .item
+              .testimonial.text-center.dark-color
+                .container-icon
+                  %i.fa.fa-quote-right
+                %p.lead " I got a dummy for Christmas and started teaching myself. I got books and records and sat in front of the practising. I did my first show in the third grade and just kept going. "
+                %h6.quote-author
+                  Jeff Dunham
+                  %span{:style => "font-weight: 400;"} ( Appel Studio )
+            .item
+              .testimonial.text-center.dark-color
+                .container-icon
+                  %i.fa.fa-quote-right
+                %p.lead " It's true, you can never eat a pet you name. And anyway, I did my first show in the third grade it would be like a ventriloquist eating his dummy. "
+                %h6.quote-author
+                  Alexander Theroux
+                  %span{:style => "font-weight: 400;"} ( USA )
+            .item
+              .testimonial.text-center.dark-color
+                .container-icon
+                  %i.fa.fa-quote-right
+                %p.lead " We're not leaving here without Buster, man. Leave no crash-test dummy behind! "
+                %h6.quote-author
+                  Adam Savage
+                  %span{:style => "font-weight: 400;"} ( Artist )
+      / End Testimonials
+      / Service
+      %section.ptb.ptb-sm-80
+        .wow.fadeIn.container.text-center
+          %h3 Our Services
+          .spacer-60
+          .row
+            .col-md-4
+              .page-icon-top
+                %i.ion.ion-ios-compose-outline
+              %h5 Web Design
+              %p Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem.
+            .col-md-4
+              .page-icon-top
+                %i.ion.ion-ios-gear-outline
+              %h5 Development
+              %p Donec sodales sagittis magna. hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus, augue velit cursus nunc.
+            .col-md-4
+              .page-icon-top
+                %i.ion.ion-social-apple-outline
+              %h5 Branding
+              %p Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales.
+      / End Service
+      %hr/
+      / Client Logos Section
+      %section#client-logos.wow.fadeIn.ptb.ptb-sm-80
+        .container
+          .owl-carousel.client-carousel.nf-carousel-theme
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/01.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/02.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/03.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/04.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/05.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/06.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/08.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/01.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/02.png"}/
+            .item
+              .client-logo
+                %img{:alt => "", :src => "img/logos/03.png"}/
+      / End Client Logos Section
+      / Statement Section
+      %section#statement.dark-bg.ptb-60
+        .container.text-center
+          .row
+            .col-md-8.col-md-offset-2
+              %h4.mb-15 Pellentesque eu pretium quis adipiscing sem?
+              %a.btn.btn-md.btn-white Buy this Theme
+      / End Statement Section
+      / About Section
+      / End CONTENT ----------------------------------------------------------------------------
+      / FOOTER
+      %footer.footer.pt-80
+        .container
+          .row.mb-60
+            / Logo
+            .col-md-3.col-sm-3.col-xs-12.mb-xs-30
+              %a.footer-logo{:href => "home.html"}
+                %img{:src => "img/logo-black.png"}/
+            / Logo
+            / Newsletter
+            .col-md-4.col-sm-5.col-xs-12.mb-xs-30
+              .newsletter
+                %form
+                  %input.newsletter-input.input-md.newsletter-input.mb-0{:placeholder => "Enter Your Email", :type => "email"}/
+                  %button.newsletter-btn.btn.btn-xs.btn-white{:type => "submit", :value => ""}
+                    %i.fa.fa-angle-right.mr-0
+            / End Newsletter
+            / Social
+            .col-md-3.col-md-offset-2.col-sm-4.col-xs-12
+              %ul.social
+                %li
+                  %a{:href => "https://www.twitter.com/", :target => "_blank"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "https://instagram.com/", :target => "_blank"}
+                    %i.fa.fa-instagram
+                %li
+                  %a{:href => "https://www.facebook.com/", :target => "_blank"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "https://vimeo.com/", :target => "_blank"}
+                    %i.fa.fa-vimeo-square
+                %li
+                  %a{:href => "https://www.behance.net/", :target => "_blank"}
+                    %i.fa.fa-behance
+            / End Social
+          / Footer Info
+          .row.footer-info.mb-60
+            .col-md-3.col-sm-12.col-xs-12.mb-sm-30
+              %p.mb-xs-0 Our ante tincidunt tempus, Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros.
+              %a.btn-link-a{:href => "about-1.html"} Read More
+            .col-md-3.col-sm-6.col-xs-12.mb-sm-30.mb-xs-0
+              %ul.link
+                %li
+                  %a{:href => "blog-grid-3col.html"} Blog
+                %li
+                  %a{:href => "portfolio-grid-3col.html"} Portfolio
+                %li
+                  %a{:href => "login-register.html"} Login &amp; Signup
+                %li
+                  %a{:href => "faq-1.html"} FAQ
+                %li
+                  %a{:href => "about-1.html"} About
+                %li
+                  %a{:href => "service-1.html"} Service
+            .col-md-3.col-sm-6.col-xs-12.mb-sm-30
+              %ul.link
+                %li
+                  %a{:href => "contact-1.html"} Contact Us
+                %li
+                  %a{:href => "shop-checkout.html"} Shopping Cart
+                %li
+                  %a{:href => "404-error-1.html"} 404 Error
+                %li
+                  %a{:href => "home.html"} Home
+            .col-md-3.col-sm-12.col-xs-12
+              %p 502, DieSachbearbeiter, Schönhauser Allee, 167c10435 Berlin,Germany.
+              %ul.link-small
+                %li
+                  %a{:href => "mailto:yourname@domain.com"}
+                    %i.fa.fa-envelope-o.left>
+                    yourname@domain.com
+                %li
+                  %a
+                    %i.fa.fa-phone.left>
+                    +40 (0) 012 345 6789
+          / End Footer Info
+        %hr/
+        / Copyright Bar
+        %section.copyright.ptb-60
+          .container
+            %p
+              © 2015
+              = succeed "." do
+                %a
+                  %b Mazel Template
+              %br/
+              Template  by
+              %a{:href => "http://nileforest.com/", :target => "_blank"}
+                %b nileforest
+        / End Copyright Bar
+      / END FOOTER
+      / Scroll Top
+      %a.scroll-top
+        %i.fa.fa-angle-double-up
+      / End Scroll Top
+    / Site Wraper End
+    / JS
+    %script{:src => "js/jquery-1.11.2.min.js", :type => "text/javascript"}
+    %script{:src => "js/jquery-ui.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.easing.js", :type => "text/javascript"}
+    %script{:src => "js/bootstrap.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.flexslider.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/background-check.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.fitvids.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.viewportchecker.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.stellar.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/wow.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.colorbox-min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/owl.carousel.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/isotope.pkgd.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/masonry.pkgd.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/imagesloaded.pkgd.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jPushMenu.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/jquery.fs.tipper.min.js", :type => "text/javascript"}
+    %script{:src => "js/plugin/mediaelement-and-player.min.js"}
+    %script{:src => "js/plugin/jquery.validate.min.js", :type => "text/javascript"}
+    %script{:src => "js/theme.js", :type => "text/javascript"}
+    %script{:src => "js/navigation.js", :type => "text/javascript"}
