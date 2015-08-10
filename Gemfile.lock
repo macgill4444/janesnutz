@@ -638,6 +638,7 @@ DEPENDENCIES
   dotenv-rails
   erb2haml
   google-analytics-rails
+  haml
   jbuilder (~> 2.0)
   jquery-rails
   omniauth

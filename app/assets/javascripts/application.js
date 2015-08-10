@@ -15,4 +15,8 @@
 //= require turbolinks
 //= require bootstrap
 
+//= require active_admin
+
 //= require_tree .
+
+//= require_tree ../../../vendor/assets/javascripts

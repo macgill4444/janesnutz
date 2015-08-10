@@ -9,7 +9,7 @@
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
     / Prelang: Analytics / Google Analytics
     = analytics_init if Rails.env.production? or Rails.env.development?
-  %body
+  %body.full-intro.background--dark
     = render partial: "elements/navbar"
     = bootstrap_flash
     = yield
